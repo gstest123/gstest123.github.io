@@ -1,0 +1,93 @@
+/* Dropdown Submenu*/
+
+.dropdown-submenu{
+    position: relative;
+}
+.dropdown-submenu a::after{
+    transform: rotate(-90deg);
+    position: absolute;
+    right: 3px;
+    top: 40%;
+}
+.dropdown-submenu:hover .dropdown-menu, .dropdown-submenu:focus .dropdown-menu{
+    display: flex;
+    flex-direction: column;
+    position: absolute !important;
+    margin-top: -30px;
+    left: 100%;
+}
+@media (max-width: 992px) {
+    .dropdown-menu{
+        width: 100%;
+    }
+    .dropdown-menu .dropdown-submenu{
+        width: auto;
+    }
+}
+
+
+/* Dropdown automatically hover*/
+
+.dropdown:hover > .dropdown-menu {
+    display: block;
+}
+.dropdown > .dropdown-toggle:active {
+    /Without this, clicking will make it sticky/
+    pointer-events: none;
+}
+
+.card {
+  /* Closest font I can find that looks like prototype's. */
+  font-family: "Open Sans", sans-serif;
+  font-size: 24px;
+
+  /* Makes card smaller than viewport, looks more like a card than a screen. */
+  margin: 3%;
+  /* More appropriate width for a card. */
+  max-width: 100%;
+
+  /* Makes card float out of page. */
+  border: 1px solid #ddd;
+  padding: 3%;
+  box-shadow: 8px 8px 8px 8px #eee;
+
+  /* Colors card background, but leaves important info clear agaisnt white. */
+  background: linear-gradient(0, #eeeeff, white 30%, white 90%, #eeeeff);
+}
+
+h4 {
+  /* Spacing and sizing to match prototype's. */
+ 
+
+}
+
+
+.info {
+  /* Box up info segment. */
+  /* Spacing to match prototype's. */
+  padding: 4%;
+}
+
+.interesting-fact {
+  font-style: normal;
+  font-size: 18px;
+  /* Spacing and sizing to match prototype's. */
+  margin: 0;
+}
+
+
+
+.label {
+  /* Heavier font weight to match prototype's. */
+  font-weight: 700;
+  /* Watch out. Labels are not italicized! */
+  font-style: normal;
+ 
+}
+/* Easier to maintain. Form fields contain only data. */
+/* Removed the ':' and ' ' from HTML. */
+.label::after {
+  content: ": ";
+}
+
+/* Draw a subtle box for footnote, where I place attributions. */
